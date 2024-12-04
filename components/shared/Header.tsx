@@ -1,5 +1,7 @@
+import { SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 export default function Header() {
   return (
@@ -13,7 +15,11 @@ export default function Header() {
             height={38}
           ></Image>
         </Link>
-        <div className="flex w-32 justify-end gap-3"></div>
+        <div className="flex w-32 justify-end gap-3">
+          {/* <SignedOut>
+            <Button asChild className="rounded-full" size="lg"></Button>
+          </SignedOut> */}
+        </div>
       </div>
     </header>
   );
